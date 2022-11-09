@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objSpikeBlock",
+  "name": "objBlockWoodTall",
   "spriteId": {
-    "name": "imgSpikesBlock",
-    "path": "sprites/imgSpikesBlock/imgSpikesBlock.yy",
+    "name": "imgBlockWoodTall",
+    "path": "sprites/imgBlockWoodTall/imgBlockWoodTall.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objSpike",
-    "path": "objects/objSpike/objSpike.yy",
+    "name": "objBlock",
+    "path": "objects/objBlock/objBlock.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "traps",
-    "path": "folders/Objects/traps.yy",
+    "name": "blocks",
+    "path": "folders/Objects/blocks.yy",
   },
 }

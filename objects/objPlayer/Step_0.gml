@@ -1,4 +1,4 @@
-
+gamepadCheck();
 
 
 
@@ -18,6 +18,11 @@ if(pressedJump && jumps > 0){
 	onLadder = false;
 	ySpeed = jumpPow;
 	jumps --;
+}
+
+//short jump
+if(!holdingJump && ySpeed < 0){
+	ySpeed = 0;
 }
 
 //check for ladder

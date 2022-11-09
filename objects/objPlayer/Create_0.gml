@@ -1,4 +1,5 @@
 depth = -100;
+gamepadCheck();
 
 
 //in put vars
