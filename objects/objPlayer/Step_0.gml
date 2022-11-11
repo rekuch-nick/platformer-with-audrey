@@ -62,7 +62,7 @@ if(yPush != 0){
 	if(yPush < 0){ yPush ++; }
 }
 
-
+//move player with moving platform
 if(onPlat != noone){
 	xSpeed += onPlat.dir * onPlat.moveSpeed;
 }
@@ -75,6 +75,7 @@ if(playerOnGround()){
 	if(ySpeed > 0){ ySpeed = 0; }
 } else {
 	ySpeed ++;
+	if(jumps == jumpsMax){ jumps --; }
 }
 
 
