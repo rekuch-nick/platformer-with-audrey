@@ -16,7 +16,10 @@ xPush = 0;
 yPush = 0;
 walkSpeed = 6;
 onLadder = false;
+
+isPlayer = true;
 onPlat = noone;
+onBreak = noone;
 
 // jumping vars
 jumpPow = -16;

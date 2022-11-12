@@ -70,6 +70,7 @@ if(onPlat != noone){
 
 //apply gravity
 onPlat = noone;
+onBreak = noone;
 if(playerOnGround()){
 	jumps = jumpsMax;
 	if(ySpeed > 0){ ySpeed = 0; }
