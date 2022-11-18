@@ -11,12 +11,12 @@ if(id == player.onBreak){
 
 
 if(damage > 120){
-		player.onBreak = noone;
+	player.onBreak = noone;
+	
+	y += 10;
 		
-		y += 10;
-		
-		if(y >= room_height){
-			instance_destroy();
-		}
+	if(y >= room_height){
+		instance_destroy();
 	}
+}
 
