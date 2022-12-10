@@ -7,6 +7,9 @@ function playerGetInput(){
 	holdingJump = false;
 	releasedJump = false;
 	
+	pressedB = false;
+	holdingB = false;
+	
 	if(keyboard_check(vk_left) || keyboard_check(ord("A")) ||
 								gamepad_button_check(player.gamepadID, gp_padl) || 
 								gamepad_axis_value(player.gamepadID, gp_axislh) < -.5 ){
@@ -41,8 +44,8 @@ function playerGetInput(){
 		holdingJump = false;
 	}*/
 	
-	holdingJump = keyboard_check(vk_space);
-	pressedJump = keyboard_check_pressed(vk_space);
+	//holdingJump = keyboard_check(vk_space);
+	//pressedJump = keyboard_check_pressed(vk_space);
 	
 	
 	
@@ -50,6 +53,14 @@ function playerGetInput(){
 	//
 	holdingJump = keyboard_check(vk_space) || gamepad_button_check(player.gamepadID, gp_face1);
 	pressedJump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(player.gamepadID, gp_face1);
+	
+	
+	
+	holdingB = keyboard_check(vk_shift) || gamepad_button_check(player.gamepadID, gp_face2);
+	pressedB = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(player.gamepadID, gp_face2);
+	
+	
+	
 	
 	
 }

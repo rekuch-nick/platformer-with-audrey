@@ -4,6 +4,10 @@ function pointInPlatform(a, b){
 		
 		if(object_index == objPlayer){
 			player.onPlat = collision_point(a, b, objPlatformMove, true, true);
+			
+			if(player.onPlat == noone){
+				player.onPlat = collision_point(a, b, objPlatformFall, true, true);
+			}
 		}
 		
 		

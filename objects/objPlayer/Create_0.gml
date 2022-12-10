@@ -1,3 +1,4 @@
+image_xscale = 4; image_yscale = 4;
 depth = -100;
 gamepadCheck();
 
@@ -8,6 +9,8 @@ yIn = 0;
 pressedJump = false;
 holdingJump = false;
 releasedJump = false;
+pressedB = false;
+holdingB = false;
 
 //movement vars
 xSpeed = 0;
@@ -23,8 +26,8 @@ onBreak = noone;
 
 // jumping vars
 jumpPow = -16;
-jumps = 1;
-jumpsMax = 1;
+jumps = 2;
+jumpsMax = 2;
 
 //bump vars
 width = 24;
@@ -34,3 +37,12 @@ facing = 1;
 hurtTime = 0;
 
 coins = 0;
+
+landingFrame = false;
+
+
+
+
+item = objPlatformTemp;
+
+

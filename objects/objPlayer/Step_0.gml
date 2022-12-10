@@ -5,6 +5,9 @@ gamepadCheck();
 playerGetInput();
 xSpeed = xIn * walkSpeed;
 
+
+
+
 //look in direction of arrow press
 if(facing > 0){
 	if(image_xscale < 0){ image_xscale *= -1; }
@@ -46,15 +49,32 @@ if(onLadder){
 	}
 }
 
-
+//set push for ice
+if(( xSpeed != 0 ) && player.onBreak != noone){
+	if(player.onBreak.object_index == objBlockIce){
+		xPush = (walkSpeed + 2) * facing;
+	}
+} else if( landingFrame && player.onBreak != noone){
+	if(player.onBreak.object_index == objBlockIce){
+		xPush = 4 * facing;
+	}
+}
 
 
 
 //pushPlayer
 if(xPush != 0){
+	
+	var xOld = xSpeed;
 	xSpeed = xPush;
-	if(xPush > 0){ xPush --; }
-	if(xPush < 0){ xPush ++; }
+	if(xOld > 0 && xOld > xPush){ xSpeed = xOld; }
+	if(xOld < 0 && xOld < xPush){ xSpeed = xOld; }
+	var m = 1;
+	if(onBreak != noone && onBreak.object_index == objBlockIce){ m = .5; }
+	if(abs(xPush) < 1){ m = .5; }
+	
+	if(xPush > 0){ xPush -= m; }
+	if(xPush < 0){ xPush += m; }
 }
 if(yPush != 0){
 	ySpeed = yPush;
@@ -64,8 +84,15 @@ if(yPush != 0){
 
 //move player with moving platform
 if(onPlat != noone){
-	xSpeed += onPlat.dir * onPlat.moveSpeed;
+	if(onPlat.object_index == objPlatformMove || onPlat.object_index == objPlatformMove2 ){
+		xSpeed += onPlat.dir * onPlat.moveSpeed;
+	}
 }
+
+
+
+
+
 
 
 //apply gravity
@@ -79,18 +106,20 @@ if(playerOnGround()){
 	if(jumps == jumpsMax){ jumps --; }
 }
 
-
-
+//fall
+landingFrame = false;
 if(ySpeed > 0){
 	for(var i=0; i<abs(ySpeed); i++){
 		y ++;
 		if(playerOnGround()){
+			landingFrame = true;
 			ySpeed = 0;
 			break;
 		}
 	}
 }
 
+//ascend
 if(ySpeed < 0){
 	for(var i=0; i<abs(ySpeed); i++){
 		y --;
@@ -103,8 +132,7 @@ if(ySpeed < 0){
 
 
 
-
-
+// walk
 if(xSpeed != 0){
 	if(xSpeed > 0){
 		dir = 1;
@@ -120,6 +148,15 @@ if(xSpeed != 0){
 }
 
 
+
+
+//use items
+if(pressedB){
+	if(item == objPlatformTemp){
+		yPush = -4;
+		instance_create_depth(x-48, y+2, depth, item);
+	}
+}
 
 
 
@@ -139,8 +176,15 @@ if(hurtTime > 0){
 
 //set picture
 f = imgPlayerStanding;
-if(xSpeed != 0){ f = imgPlayerWalking; }
-if(onPlat != noone){ f = imgPlayerStanding; }
+if(xSpeed != 0){ 
+	f = imgPlayerWalking; 
+	if(onPlat != noone){ f = imgPlayerStanding; }
+}
+if(ySpeed > 0){ f = imgPlayerFall; }
+if(ySpeed < 0){
+	f = imgPlayerJump1;
+	if(jumps == 0){ f = imgPlayerJump2; }
+}
 if(yIn > 0){ f = imgPlayerDucking; }
 if(onLadder){
 	f = imgPlayerClimbing;
