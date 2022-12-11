@@ -41,7 +41,8 @@ coins = 0;
 landingFrame = false;
 
 
-
+state = "play";
+fireworksTime = 0;
 
 item = objPlatformTemp;
 

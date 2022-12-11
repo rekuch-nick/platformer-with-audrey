@@ -1,8 +1,27 @@
 gamepadCheck();
-
-
-
 playerGetInput();
+
+
+if(player.state == "next room"){
+	if(fireworksTime > 0){
+		fireworksTime --;
+		if(fireworksTime % 3 == 0){
+			var a = camera_get_view_x(view_camera[0]) + irandom_range(0,  camera_get_view_width(view_camera[0]));
+			var b = camera_get_view_y(view_camera[0]) + irandom_range(0,  camera_get_view_height(view_camera[0]));
+
+			
+			effect_create_above(ef_firework, a, b, choose(2, 2, 3), choose(c_aqua, c_white));
+		}
+	} else {
+		room_goto_next();
+		player.state = "play";
+		player.x = 96; player.y = 720;
+	}
+}
+
+if(player.state != "play"){ return; }
+
+
 xSpeed = xIn * walkSpeed;
 
 

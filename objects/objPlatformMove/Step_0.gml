@@ -1,4 +1,4 @@
-
+if(player.state != "play"){ return; }
 
 
 
