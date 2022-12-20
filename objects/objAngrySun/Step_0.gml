@@ -28,6 +28,6 @@ if(player.x < x && image_xscale < 0){ image_xscale *= -1; }
 if(player.x > x && image_xscale > 0){ image_xscale *= -1; }
 
 shootCD --; if(shootCD < 1){
-	shootCD = 120;
+	shootCD = 180;
 	instance_create_depth(x, y + 20, -100, objShot);
 }

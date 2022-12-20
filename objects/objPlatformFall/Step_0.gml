@@ -18,7 +18,7 @@ if(player.onPlat == id){
 		
 	} else {
 		
-		if(riseWait > 0){ riseWait --; }
+		riseWait = 0;
 	}
 	
 	
