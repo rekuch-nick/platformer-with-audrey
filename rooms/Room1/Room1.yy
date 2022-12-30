@@ -258,6 +258,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_92E7031","properties":[],"isDnd":false,"objectId":{"name":"objBlockCloud","path":"objects/objBlockCloud/objBlockCloud.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3680.0,"y":320.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7A512093","properties":[],"isDnd":false,"objectId":{"name":"objBlockCloud","path":"objects/objBlockCloud/objBlockCloud.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3792.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_438C2F2E","properties":[],"isDnd":false,"objectId":{"name":"objBlockCloud","path":"objects/objBlockCloud/objBlockCloud.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3968.0,"y":288.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_18302531","properties":[],"isDnd":false,"objectId":{"name":"objGoal","path":"objects/objGoal/objGoal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":4.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":1088.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"ladders","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_836450F","properties":[],"isDnd":false,"objectId":{"name":"objLadder","path":"objects/objLadder/objLadder.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1856.0,"y":544.0,},
@@ -662,6 +663,7 @@
     {"name":"inst_92E7031","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7A512093","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_438C2F2E","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_18302531","path":"rooms/Room1/Room1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objBlock",
+  "name": "objBGStars",
   "spriteId": {
-    "name": "imgBlock",
-    "path": "sprites/imgBlock/imgBlock.yy",
+    "name": "imgBGStars",
+    "path": "sprites/imgBGStars/imgBGStars.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "objScrollable",
-    "path": "objects/objScrollable/objScrollable.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -31,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "blocks",
-    "path": "folders/Objects/blocks.yy",
+    "name": "bgs",
+    "path": "folders/Objects/bgs.yy",
   },
 }

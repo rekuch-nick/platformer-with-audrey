@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objBlock",
+  "name": "objBlockSpawnner",
   "spriteId": {
-    "name": "imgBlock",
-    "path": "sprites/imgBlock/imgBlock.yy",
+    "name": "imgBlockSpawner",
+    "path": "sprites/imgBlockSpawner/imgBlockSpawner.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objScrollable",
-    "path": "objects/objScrollable/objScrollable.yy",
+    "name": "objBlock",
+    "path": "objects/objBlock/objBlock.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,7 +27,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
