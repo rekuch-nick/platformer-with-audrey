@@ -1,32 +1,51 @@
-if(id == player.onBreak){
-	damage ++;
-	image_index = floor(damage / 20);	
-}
 
-
-if(damage > 120){
+//if player standing on me, don't heal or restore
+if(player.onBreak == id){
+	healCD = 0;
+	restoreCD = 0;
 	
-		
-	if(y >= room_height){
-		healCD --;
-		if(healCD < 1){
-			healCD = 600;
-			damage = 0;
-			x = xStart;
-			y = yStart;
-			image_index = 0;
-			
-			var disFromPlayer = abs(x - player.x) + abs(y - player.y);
-			if(disFromPlayer < 120){
-				healCD = 60;
-				y = room_height + 10;
-				damage = 121;
-			}
-		}
-		
-	} else {
-		player.onBreak = noone;
-		y += 20;
+	// give player a chance to jump when it falls
+	damage ++;
+	if(damage == damageMax){
+		player.coyoteTime = 20;
 	}
 }
 
+// if damaged, increase heal timer
+if(damage > 0){
+	healCD ++;
+	// if heal timer full, heal a point
+	if(healCD >= healCDMax){
+		damage --;
+	}
+// reset heal timer anytime not damaged
+} else {
+	healCD = 0;
+}
+
+
+//fall when totally damaged, also make player forger they stood on me
+if(damage >= damageMax){
+	y += 20;
+	player.onBreak = noone;
+}
+
+//if all the way off the screen, check for restore
+if(y >= room_height){
+	restoreCD ++;
+	if(restoreCD >= restoreCDMax){
+		
+		// don't restore on top of player
+		if(point_distance(player.x, player.y, xStart, yStart) >= 400){
+			restoreCD = 0;
+			healCD = 0;
+			damage = 0;
+			x = xStart;
+			y = yStart;
+		}
+	}
+}
+
+
+//choose costume based on damage / damageMax
+image_index = floor((damage / damageMax) * lastFrame);

@@ -10,10 +10,8 @@ function pointInPlatform(a, b){
 			}
 		}
 		
-		
 		return true;
 	}
-	
 	
 	return false;
 }

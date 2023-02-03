@@ -10,6 +10,10 @@ if(hurtTime < 1){
 	}
 	
 	
+	if(other.object_index == objLightning){
+		beingShocked = true;
+	}
+	
 
 	hurtTime = 60;
 	yPush = -13;

@@ -25,7 +25,9 @@
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
     {"id":{"name":"objBGScroll2","path":"objects/objBGScroll2/objBGScroll2.yy",},"order":5,},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
+    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":2,},
     {"id":{"name":"imgSpikesLong","path":"sprites/imgSpikesLong/imgSpikesLong.yy",},"order":15,},
+    {"id":{"name":"objBlockBreakOld","path":"objects/objBlockBreakOld/objBlockBreakOld.yy",},"order":9,},
     {"id":{"name":"objPlatformFall","path":"objects/objPlatformFall/objPlatformFall.yy",},"order":6,},
     {"id":{"name":"objSpikeBlock","path":"objects/objSpikeBlock/objSpikeBlock.yy",},"order":1,},
     {"id":{"name":"gamepadCheck","path":"scripts/gamepadCheck/gamepadCheck.yy",},"order":4,},
@@ -72,6 +74,7 @@
     {"id":{"name":"objBlock","path":"objects/objBlock/objBlock.yy",},"order":0,},
     {"id":{"name":"imgSpikesBlock","path":"sprites/imgSpikesBlock/imgSpikesBlock.yy",},"order":6,},
     {"id":{"name":"playerOnGround","path":"scripts/playerOnGround/playerOnGround.yy",},"order":3,},
+    {"id":{"name":"imgPlayerShock","path":"sprites/imgPlayerShock/imgPlayerShock.yy",},"order":42,},
     {"id":{"name":"imgBlock","path":"sprites/imgBlock/imgBlock.yy",},"order":1,},
     {"id":{"name":"objBGStatue","path":"objects/objBGStatue/objBGStatue.yy",},"order":3,},
     {"id":{"name":"imgBlockLong","path":"sprites/imgBlockLong/imgBlockLong.yy",},"order":17,},
@@ -101,6 +104,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

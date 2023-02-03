@@ -1,6 +1,15 @@
-damage = 0;
+
 
 xStart = x;
 yStart = y;
 
-healCD = 600;
+damage = 0;
+damageMax = 120;
+
+lastFrame = 6;
+
+healCD = 0;
+healCDMax = 120;
+
+restoreCD = 0;
+restoreCDMax = 0;

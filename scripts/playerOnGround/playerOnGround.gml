@@ -16,6 +16,7 @@ function playerOnGround(){
 		if(pointInPlatform(player.x+player.width-1, player.y + 1)){ return true; }
 	}
 	
+	if(coyoteTime > 0){ return true; }
 	
 	return false;
 }

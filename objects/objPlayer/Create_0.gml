@@ -28,6 +28,7 @@ onBreak = noone;
 jumpPow = -16;
 jumps = 2;
 jumpsMax = 2;
+coyoteTime = 0;
 
 //bump vars
 width = 24;
@@ -39,10 +40,12 @@ hurtTime = 0;
 coins = 0;
 
 landingFrame = false;
+beingShocked = false;
 
 
 state = "play";
 fireworksTime = 0;
+nextRoom = noone;
 
 item = objPlatformTemp;
 

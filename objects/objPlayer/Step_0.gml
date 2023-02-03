@@ -13,7 +13,11 @@ if(player.state == "next room"){
 			effect_create_above(ef_firework, a, b, choose(2, 2, 3), choose(c_aqua, c_white));
 		}
 	} else {
-		room_goto_next();
+		if(nextRoom == noone){
+			room_goto_next();
+		} else {
+			room_goto(nextRoom);
+		}
 		player.state = "play";
 		player.x = 96; player.y = 520;
 	}
@@ -40,6 +44,7 @@ if(pressedJump && jumps > 0){
 	onLadder = false;
 	ySpeed = jumpPow;
 	jumps --;
+	coyoteTime = 0;
 }
 
 //short jump
@@ -186,9 +191,8 @@ if(pressedB){
 
 
 //counters
-if(hurtTime > 0){
-	hurtTime --;
-}
+if(hurtTime > 0){ hurtTime --; }
+if(coyoteTime > 0){ coyoteTime --; }
 
 
 
@@ -204,12 +208,13 @@ if(ySpeed < 0){
 	f = imgPlayerJump1;
 	if(jumps == 0){ f = imgPlayerJump2; }
 }
-if(yIn > 0){ f = imgPlayerDucking; }
+if(yIn > 0 && !onLadder){ f = imgPlayerDucking; }
 if(onLadder){
 	f = imgPlayerClimbing;
 	if(yIn == 0){ image_index = 0; }
 }
-if(hurtTime > 0){ f = imgPlayerHurt; }
+if(hurtTime > 0){ f = imgPlayerHurt; } else { beingShocked = false; }
+if(beingShocked){ f = imgPlayerShock; }
 sprite_index = f;
 
 
