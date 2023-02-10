@@ -1,4 +1,3 @@
-
 //if player standing on me, don't heal or restore
 if(player.onBreak == id){
 	healCD = 0;
@@ -27,7 +26,9 @@ if(damage > 0){
 //fall when totally damaged, also make player forger they stood on me
 if(damage >= damageMax){
 	y += 20;
-	player.onBreak = noone;
+	if(player.onBreak == id){
+		player.onBreak = noone;
+	}
 }
 
 //if all the way off the screen, check for restore

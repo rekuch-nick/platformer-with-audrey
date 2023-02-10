@@ -12,4 +12,4 @@ healCD = 0;
 healCDMax = 120;
 
 restoreCD = 0;
-restoreCDMax = 0;
+restoreCDMax = 120;
