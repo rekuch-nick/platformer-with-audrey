@@ -49,4 +49,5 @@ nextRoom = noone;
 
 item = objPlatformTemp;
 
-
+zebAlpha = .2;
+zebDir = 1;

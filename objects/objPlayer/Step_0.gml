@@ -19,7 +19,7 @@ if(player.state == "next room"){
 			room_goto(nextRoom);
 		}
 		player.state = "play";
-		player.x = 96; player.y = 520;
+		
 	}
 }
 

@@ -4,7 +4,13 @@ draw_text_transformed(0, 0, "$ " + string(coins), 4, 4, 0);
 if(onBreak != noone){
 	if(onBreak.object_index == objBlockZeb){	
 		
-		draw_sprite(imgZebraVision, choose(0, 1, 2), 0, 0);
+		var f = floor(current_time / 600) % 3;
+		//draw_sprite(imgZebraVision, choose(0, 1, 2), 0, 0);
+		draw_sprite_ext(imgZebraVision, f, 0, 0, 1, 1, 0, c_white, zebAlpha);
+		
+		zebAlpha += .01 * zebDir;
+		if(zebAlpha >= .9){ zebDir = -1; }
+		if(zebAlpha <= .4){ zebDir = 1; }
 		
 		/*
 		var a = irandom_range(1, 400);
