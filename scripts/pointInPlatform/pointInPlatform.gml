@@ -6,8 +6,18 @@ function pointInPlatform(a, b){
 			player.onPlat = collision_point(a, b, objPlatformMove, true, true);
 			
 			if(player.onPlat == noone){
+				player.onPlat = collision_point(a, b, objPlatformElevator, true, true);
+			}
+			
+			if(player.onPlat == noone){
 				player.onPlat = collision_point(a, b, objPlatformFall, true, true);
 			}
+			
+			if(player.onPlat == noone){
+				player.onPlat = collision_point(a, b, objPlatformMoveUp, true, true);
+			}
+			
+			
 		}
 		
 		return true;
