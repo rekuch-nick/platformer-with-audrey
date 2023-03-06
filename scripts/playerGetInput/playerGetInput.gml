@@ -37,6 +37,10 @@ function playerGetInput(){
 		yIn --;
 	}
 	
+	tappedDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(player.gamepadID, gp_padd) || gamepad_axis_value(player.gamepadID, gp_axislv) >= 1;
+	tappedUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(player.gamepadID, gp_padu) || gamepad_axis_value(player.gamepadID, gp_axislv) <= -1;
+
+	
 	/*
 	if(keyboard_check(vk_space)){
 		holdingJump = true;

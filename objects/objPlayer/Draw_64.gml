@@ -1,5 +1,14 @@
+if(gameOverTime > 0){ return; }
 
 draw_text_transformed(0, 0, "$ " + string(coins), 4, 4, 0);
+
+for(var i=0; i<hpMax; i++){
+	var f = 0;
+	if(hp <= i){ f = 1; }
+	draw_sprite_stretched(imgHeartGauge, f, 1000 + i * 40, 0, 40, 40);
+}
+
+
 
 if(onBreak != noone){
 	if(onBreak.object_index == objBlockZeb){	

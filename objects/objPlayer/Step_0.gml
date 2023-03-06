@@ -2,6 +2,11 @@ gamepadCheck();
 playerGetInput();
 
 
+if(openShop){
+	openShop = false;
+	instance_create_depth(0, 0, -9000, objScreenShop);
+}
+
 if(player.state == "next room"){
 	if(fireworksTime > 0){
 		fireworksTime --;
@@ -19,7 +24,33 @@ if(player.state == "next room"){
 			room_goto(nextRoom);
 		}
 		player.state = "play";
-		
+		hp = hpMax;
+		item = noone;
+	}
+}
+
+if(hp < 1){ 
+	player.state = "game over";
+	item = noone;
+	hp = hpMax;
+	gameOverTime = 60 * 5;
+}
+
+if(player.state == "game over"){
+	if(gameOverTime > 0){
+		gameOverTime --;
+		for(var i=0; i<2; i++){
+			var a = camera_get_view_x(view_camera[0]) + irandom_range(0,  camera_get_view_width(view_camera[0]));
+			var b = camera_get_view_y(view_camera[0]) + irandom_range(0,  camera_get_view_height(view_camera[0]));
+			effect_create_above(ef_explosion, a, b, choose(2, 2, 3, 4), choose(c_red, c_orange, c_black));
+		}
+		with(objBlock){ x += choose(-2, 2); y += choose(2, -2); }
+		with(objSpike){ x += choose(-2, 2); y += choose(2, -2); }
+		with(objPlatform){ x += choose(-2, 2); y += choose(2, -2); }
+	} else {
+		player.state = "play";
+		hp = hpMax;
+		room_goto(room);
 	}
 }
 
@@ -123,10 +154,14 @@ if(onPlat != noone){
 onPlat = noone;
 onBreak = noone;
 if(playerOnGround()){
+	//if(ySpeed < -4 && onWeb){ ySpeed = -4; }
 	jumps = jumpsMax;
 	if(ySpeed > 0){ ySpeed = 0; }
 } else {
-	ySpeed ++;
+	ySpeed += 1;
+	
+	if(item == imgPlayerSunbrella && yIn <= 0 && ySpeed > 4){ ySpeed = 4; }
+	
 	if(jumps == jumpsMax){ jumps --; }
 }
 
@@ -155,7 +190,7 @@ if(ySpeed < 0){
 }
 
 
-
+onWeb = false;
 // walk
 if(xSpeed != 0){
 	if(xSpeed > 0){
@@ -167,6 +202,12 @@ if(xSpeed != 0){
 	x += xSpeed;
 	
 	while(collision_rectangle(x, y+head, x + (width * dir), y, objBlock, true, true)){
+		
+		if(collision_rectangle(x, y+head, x + (width * dir), y, objBlockWoodWebTall, true, true)){
+			onWeb = true;
+		}
+		
+		
 		x -= dir;
 	}
 }
@@ -176,13 +217,12 @@ if(xSpeed != 0){
 
 //use items
 if(pressedB){
-	if(item == objPlatformTemp){
-		yPush = -4;
-		instance_create_depth(x-48, y+2, depth, item);
-	}
+	if(item == objPlatformTemp){ yPush = -4; instance_create_depth(x-48, y+2, depth, item); }
 }
 
-
+if(item == imgPlayerHammer && irandom_range(1, 90) == 1){
+	instance_create_depth(x-48, y+6, depth, objPlatformTemp);
+}
 
 
 
@@ -213,6 +253,7 @@ if(onLadder){
 	f = imgPlayerClimbing;
 	if(yIn == 0){ image_index = 0; }
 }
+if(onWeb){ image_index = 0; }
 if(hurtTime > 0){ f = imgPlayerHurt; } else { beingShocked = false; }
 if(beingShocked){ f = imgPlayerShock; }
 sprite_index = f;

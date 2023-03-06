@@ -1,5 +1,7 @@
 function playerOnGround(){
 	
+	if(player.onWeb && player.ySpeed > -4){ return true; }
+	
 	if(player.y > room_height){ return true; }
 	
 	

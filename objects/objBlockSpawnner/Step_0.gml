@@ -24,7 +24,12 @@ if(player.x > x && player.y < y){
 		var a = room_width;
 		var b = irandom_range(0, floor(y/32)) * 32;
 		
-		instance_create_depth(a, b, -10, objPlatform);
+		var obj = choose(objPlatform, objPlatform, objPlatform, objPlatform,
+						objBlockZeb, objBlockSun, objBlockCloud,
+						objPlatformFall
+		);
+		
+		instance_create_depth(a, b, -10, obj);
 	}
 	
 	

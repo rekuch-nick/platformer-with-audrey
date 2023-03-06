@@ -19,7 +19,7 @@ xPush = 0;
 yPush = 0;
 walkSpeed = 6;
 onLadder = false;
-
+onWeb = false;
 isPlayer = true;
 onPlat = noone;
 onBreak = noone;
@@ -37,7 +37,7 @@ facing = 1;
 
 hurtTime = 0;
 
-coins = 0;
+coins = 400;
 
 landingFrame = false;
 beingShocked = false;
@@ -45,9 +45,17 @@ beingShocked = false;
 
 state = "play";
 fireworksTime = 0;
+gameOverTime = 0;
 nextRoom = noone;
 
 item = objPlatformTemp;
 
 zebAlpha = .2;
 zebDir = 1;
+
+openShop = false;
+
+hpMax = 3;
+hp = hpMax;
+
+item = noone;
