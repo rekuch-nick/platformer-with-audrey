@@ -1,3 +1,41 @@
+
+show_debug_message("****~~~~~~~~~~~~~~~~~START~~~~~~~~~~~~~~~~~~~~~~*****");
+
+
+nam = ["N", "i", "c", "k"];
+
+for(var i=0; i<4; i++){
+	show_debug_message(nam[i]);
+}
+
+
+show_debug_message("****~~~~~~~~~~~~~~~~~~~~~END~~~~~~~~~~~~~~~~~~~~~~~~*****");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 image_xscale = 4; image_yscale = 4;
 depth = -100;
 gamepadCheck();

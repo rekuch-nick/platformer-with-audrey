@@ -1,0 +1,1 @@
+damageMax = 30;
