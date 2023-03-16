@@ -1,10 +1,21 @@
 
 
 
-txt = "What can I get you?";
+if(player.tappedUp){ cursor --; }
+if(player.tappedDown){ cursor ++; }
+
+if(cursor < 0){ cursor = cursorMax - 1; }
+if(cursor >= cursorMax){ cursor = 0; }
 
 
-/*
+
+
+
+
+
+
+
+
 if(player.pressedJump && player.coins >= cost[cursor]){
 	player.coins -= cost[cursor];
 	

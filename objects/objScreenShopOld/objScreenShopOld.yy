@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objScreenShop",
+  "name": "objScreenShopOld",
   "spriteId": {
-    "name": "imgScreenShopNew",
-    "path": "sprites/imgScreenShopNew/imgScreenShopNew.yy",
+    "name": "imgScreenShop",
+    "path": "sprites/imgScreenShop/imgScreenShop.yy",
   },
   "solid": false,
   "visible": true,

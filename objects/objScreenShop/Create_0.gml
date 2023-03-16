@@ -1,23 +1,34 @@
 image_xscale = 4; image_yscale = 4;
 player.state = "shop";
 
-cursor = 0;
-cursorMax = 5;
+txt = "";
 
-forSale[0] = "Heart Taco";
-forSale[1] = "Casual Sunbrella";
-forSale[2] = "Metro Phone Book";
-forSale[3] = "Overactive Hammer";
-forSale[4] = "Exit";
+var s = instance_create_depth(1100, 800, depth-1, objStoreItem);
+s.cost = 0;
+s.desc = "Nothing just now, thanks.";
+s.sprite_index = imgExitStore;
 
-cost[0] = player.hpMax * 2;
-cost[1] = 2;
-cost[2] = 4;
-cost[3] = 8;
-cost[4] = 0;
 
-desc[0] = "Get More Health";
-desc[1] = "Fall Slower, while looking cool";
-desc[2] = "So thick it can block shots";
-desc[3] = "Makes flors wherever you go";
-desc[4] = "Nothing just now, thanks.";
+s = instance_create_depth(300, 300, depth-1, objStoreItem);
+s.cost = 8;
+s.desc = "Fall slowly, i.e. cartoon physics";
+s.sprite_index = imgPlayerSunbrella;
+
+
+
+s = instance_create_depth(450, 300, depth-1, objStoreItem);
+s.cost = 8;
+s.desc = "So thick it'll block shots";
+s.sprite_index = imgPlayerBook;
+
+
+
+s = instance_create_depth(350, 550, depth-1, objStoreItem);
+s.cost = 8;
+s.desc = "Not really useful TBH";
+s.sprite_index = imgPlayerHammer;
+
+s = instance_create_depth(600, 550, depth-1, objStoreItem);
+s.cost = player.hpMax * 2;
+s.desc = "VERY good for you";
+s.sprite_index = imgPlayerTaco;
