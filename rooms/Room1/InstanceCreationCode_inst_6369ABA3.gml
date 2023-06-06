@@ -1,1 +1,1 @@
-nextRoom = Room5;
+nextRoom = Room6;

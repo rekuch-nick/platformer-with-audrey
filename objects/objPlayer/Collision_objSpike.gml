@@ -1,4 +1,8 @@
-
+if(other.object_index == objMob){
+	
+	if(other.destroyWhenTouched){ other.destroyThis = true; }
+	if(!other.hurtsToTouch){ return; }
+}
 
 
 if(hurtTime < 1){

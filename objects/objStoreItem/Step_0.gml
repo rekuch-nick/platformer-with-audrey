@@ -1,6 +1,9 @@
 
 
-if(selected && player.clickMouse){
+
+
+
+if(selected && player.clickMouse && player.coins >= cost){
 	
 	player.coins -= cost;
 	
@@ -16,12 +19,15 @@ if(selected && player.clickMouse){
 		player.state = "play";
 		with(objScreenShop){ instance_destroy(); }
 		with(objStoreItem){ instance_destroy(); }
+		
+		camera_set_view_target(view_camera[0], player);
 	}
 	
 	if(sprite_index == imgPlayerTaco){
 		player.hpMax = clamp(player.hpMax + 1, 0, 9);
 		player.hp = player.hpMax;
 	}
+	
 	
 	
 	instance_destroy();

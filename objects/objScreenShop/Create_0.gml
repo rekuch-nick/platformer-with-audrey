@@ -15,7 +15,6 @@ s.desc = "Fall slowly, i.e. cartoon physics";
 s.sprite_index = imgPlayerSunbrella;
 
 
-
 s = instance_create_depth(450, 300, depth-1, objStoreItem);
 s.cost = 8;
 s.desc = "So thick it'll block shots";
