@@ -3,7 +3,7 @@
 
 
 
-if(selected && player.clickMouse && player.coins >= cost){
+if(selected && (player.clickMouse || player.pressedJump) && player.coins >= cost){
 	
 	player.coins -= cost;
 	

@@ -28,3 +28,22 @@ if(player.pressedJump && player.coins >= cost[cursor]){
 	instance_destroy();
 	player.state = "play";
 }
+
+*/
+
+var xl = player.xCur;
+var yl = player.yCur;
+
+if(player.tappedDown){ player.yCur += 200; }
+if(player.tappedUp){ player.yCur -= 200; }
+if(player.tappedRight){ player.xCur += 200; }
+if(player.tappedLeft){ player.xCur -= 200; }
+
+while(player.xCur > 1366){ player.xCur -= 1366; }
+while(player.xCur < 0){ player.xCur += 1366; }
+while(player.yCur > 768){ player.yCur -= 768; }
+while(player.yCur < 0){ player.yCur += 768; }
+
+if(player.xCur != xl || player.yCur != yl){
+	selectStoreItem();
+}

@@ -1,5 +1,6 @@
 image_xscale = 4; image_yscale = 4;
 player.state = "shop";
+player.xCur = 400; player.yCur = 400;
 
 txt = "";
 
@@ -31,3 +32,6 @@ s = instance_create_depth(600, 550, depth-1, objStoreItem);
 s.cost = player.hpMax * 2;
 s.desc = "VERY good for you";
 s.sprite_index = imgPlayerTaco;
+
+
+selectStoreItem();

@@ -37,9 +37,14 @@ function playerGetInput(){
 		yIn --;
 	}
 	
-	tappedDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(player.gamepadID, gp_padd) || gamepad_axis_value(player.gamepadID, gp_axislv) >= 1;
-	tappedUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(player.gamepadID, gp_padu) || gamepad_axis_value(player.gamepadID, gp_axislv) <= -1;
-
+	//tappedDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(player.gamepadID, gp_padd) || gamepad_axis_value(player.gamepadID, gp_axislv) >= 1;
+	//tappedUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(player.gamepadID, gp_padu) || gamepad_axis_value(player.gamepadID, gp_axislv) <= -1;
+	
+	tappedDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(player.gamepadID, gp_padd);
+	tappedUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(player.gamepadID, gp_padu);
+	
+	tappedLeft = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(player.gamepadID, gp_padl);
+	tappedRight = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(player.gamepadID, gp_padr);
 	
 	/*
 	if(keyboard_check(vk_space)){

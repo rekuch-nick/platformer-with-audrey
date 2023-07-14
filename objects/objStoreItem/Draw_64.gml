@@ -1,3 +1,8 @@
+if(selected){
+	draw_set_alpha(.7);
+	draw_circle_color(x, y, sprite_width, c_white, c_grey, false);
+	draw_set_alpha(1);
+}
 draw_self();
 
 
