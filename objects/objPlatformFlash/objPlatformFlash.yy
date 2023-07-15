@@ -1,9 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objPlatform",
+  "name": "objPlatformFlash",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,8 +13,8 @@
     "path": "folders/Objects/plats.yy",
   },
   "parentObjectId": {
-    "name": "objScrollable",
-    "path": "objects/objScrollable/objScrollable.yy",
+    "name": "objPlatform",
+    "path": "objects/objPlatform/objPlatform.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPlatform",
-    "path": "sprites/imgPlatform/imgPlatform.yy",
+    "name": "imgPlatformTemp",
+    "path": "sprites/imgPlatformTemp/imgPlatformTemp.yy",
   },
   "spriteMaskId": null,
   "visible": true,

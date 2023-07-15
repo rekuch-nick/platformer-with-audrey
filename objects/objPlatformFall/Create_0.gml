@@ -1,4 +1,4 @@
-
+event_inherited();
 dir = 1;
 moveSpeed = 0;
 

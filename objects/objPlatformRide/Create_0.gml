@@ -1,3 +1,4 @@
+event_inherited();
 for(var i=0; i<3; i++){ lastRail[i] = noone; }
 
 nextRail = noone;

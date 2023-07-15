@@ -1,3 +1,4 @@
+if(player.state != "play"){ return; }
 
 if(spin){
 	do{
