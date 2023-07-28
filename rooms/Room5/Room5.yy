@@ -183,6 +183,7 @@
     {"name":"inst_35177348","path":"rooms/Room5/Room5.yy",},
     {"name":"inst_295BB739","path":"rooms/Room5/Room5.yy",},
     {"name":"inst_4FD33F7B","path":"rooms/Room5/Room5.yy",},
+    {"name":"inst_7E3052DA","path":"rooms/Room5/Room5.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -313,6 +314,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_35177348","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockWoodTall","path":"objects/objBlockWoodTall/objBlockWoodTall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5056.0,"y":1008.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_295BB739","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objMob","path":"objects/objMob/objMob.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":5280.0,"y":976.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4FD33F7B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockLong","path":"objects/objBlockLong/objBlockLong.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5248.0,"y":976.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7E3052DA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objCoinBox","path":"objects/objCoinBox/objCoinBox.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3600.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"ladders","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_bg","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

@@ -193,6 +193,7 @@
     {"name":"inst_D0C1925","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_2CD2CB1C","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_6D949378","path":"rooms/Room3/Room3.yy",},
+    {"name":"inst_29A7EB09","path":"rooms/Room3/Room3.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -367,6 +368,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_D0C1925","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockCloud","path":"objects/objBlockCloud/objBlockCloud.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2752.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2CD2CB1C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockLong","path":"objects/objBlockLong/objBlockLong.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2752.0,"y":-48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D949378","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objBlockLong","path":"objects/objBlockLong/objBlockLong.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2880.0,"y":-48.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_29A7EB09","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objCoinBox","path":"objects/objCoinBox/objCoinBox.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2288.0,"y":336.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"ladders","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4F10B017","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"objLadder","path":"objects/objLadder/objLadder.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":640.0,"y":512.0,},
