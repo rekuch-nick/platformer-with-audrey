@@ -1,4 +1,5 @@
 
+/*
 show_debug_message("****~~~~~~~~~~~~~~~~~START~~~~~~~~~~~~~~~~~~~~~~*****");
 
 
@@ -10,27 +11,7 @@ for(var i=0; i<array_length(nam); i++){
 
 
 show_debug_message("****~~~~~~~~~~~~~~~~~~~~~END~~~~~~~~~~~~~~~~~~~~~~~~*****");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
@@ -97,3 +78,4 @@ hpMax = 3;
 hp = hpMax;
 
 item = noone;
+fruitTime = 0;

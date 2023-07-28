@@ -5,7 +5,7 @@ if(other.object_index == objMob){
 }
 
 
-if(hurtTime < 1){
+if(hurtTime < 1 && fruitTime < 1){
 	
 	if(other.bookBlocks && item == imgPlayerBook){
 		if( (facing == 1 && other. x > x) || (facing == -1 && other. x < x) ){

@@ -165,6 +165,12 @@ if(playerOnGround()){
 	if(jumps == jumpsMax){ jumps --; }
 }
 
+if(fruitTime > 0 && ySpeed > 2 && yIn != 1){ ySpeed = 2; }
+if(fruitTime > 0 && holdingJump){ ySpeed = -6; }
+
+
+
+
 //fall
 landingFrame = false;
 if(ySpeed > 0){
@@ -233,7 +239,7 @@ if(item == imgPlayerHammer && irandom_range(1, 90) == 1){
 //counters
 if(hurtTime > 0){ hurtTime --; }
 if(coyoteTime > 0){ coyoteTime --; }
-
+if(fruitTime > 0){ fruitTime --; }
 
 
 
@@ -256,6 +262,10 @@ if(onLadder){
 if(onWeb){ image_index = 0; }
 if(hurtTime > 0){ f = imgPlayerHurt; } else { beingShocked = false; }
 if(beingShocked){ f = imgPlayerShock; }
+if(fruitTime > 0){ 
+	f = imgPlayerInvuln;
+	if(fruitTime < 60){ image_index = choose(0, 1); }
+}
 sprite_index = f;
 
 

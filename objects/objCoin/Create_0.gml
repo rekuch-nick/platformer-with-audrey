@@ -1,6 +1,8 @@
 spinDir = -1;
 spin = true;
+pulse = false;
 coinValue = 1;
+fruitPower = 0;
 
 xSpeed = 0;
 ySpeed = 0;

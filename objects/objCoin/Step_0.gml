@@ -8,7 +8,14 @@ if(spin){
 	if(image_xscale > 1 && spinDir > 0){ spinDir *= -1; }
 }
 
-
+if(pulse){
+	if(image_xscale > 1){ image_xscale -= .05; }
+	if(image_yscale > 1){ image_yscale -= .05; }
+	if(irandom_range(1, 60) == 1){
+		image_xscale = 1.5;
+		image_yscale = 1.5;
+	}
+}
 
 
 
