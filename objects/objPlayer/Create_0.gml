@@ -15,7 +15,7 @@ show_debug_message("****~~~~~~~~~~~~~~~~~~~~~END~~~~~~~~~~~~~~~~~~~~~~~~*****");
 
 
 
-
+room_speed = 60;
 
 image_xscale = 4; image_yscale = 4;
 depth = -100;

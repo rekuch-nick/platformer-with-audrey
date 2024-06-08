@@ -1,6 +1,6 @@
 
 
-
+return;
 
 if(player.state == "play"){ 
 	
